@@ -17,6 +17,6 @@ spec:
       serviceAccountName: default
       containers:
         - name: frontend
-          image: 974085360964.dkr.ecr.eu-north-1.amazonaws.com/simple-app-frontend:{{ .Values.image.tag }}
+          image: "974085360964.dkr.ecr.eu-north-1.amazonaws.com/simple-app-frontend:{{ .Values.simple-app-frontend.image.tag }}"
           ports:
             - containerPort: 3000
