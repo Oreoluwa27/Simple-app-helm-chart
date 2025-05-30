@@ -1,7 +1,6 @@
 simpleAppFrontend:
   image:
     repository: 974085360964.dkr.ecr.eu-north-1.amazonaws.com/simple-app-frontend
-    tag: 76dbfe1e4514237f9a87223b8c9b2261595ca715-2025-05-26-17-13
-
+    tag: 32b4bb087666d6a6849237c98a4c4e50a6aa6d47-2025-05-31-00-15
 app:
   name: simple-app-frontend
