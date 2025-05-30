@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-app-frontend-deployment
+  labels:
+    app: simple-app-frontend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: simple-app-frontend
+  template:
+    metadata:
+      labels:
+        app: simple-app-frontend
+    spec:
+      serviceAccountName: default
+      containers:
+        - name: frontend
+          image: 974085360964.dkr.ecr.eu-north-1.amazonaws.com/simple-app-frontend:76dbfe1e4514237f9a87223b8c9b2261595ca715-2025-05-26-17-13
+          ports:
+            - containerPort: 3000
