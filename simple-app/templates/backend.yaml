@@ -3,21 +3,21 @@ kind: Deployment
 metadata:
   name: simple-app-backend-deployment
   labels:
-    app: simple-app-backend
+    app: {{ .Values.simpleAppBackend.app.name }}
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: simple-app-backend
+      app: {{ .Values.simpleAppBackend.app.name }}
   template:
     metadata:
       labels:
-        app: simple-app-backend
+        app: {{ .Values.simpleAppBackend.app.name }}
     spec:
       serviceAccountName: default
       containers:
-        - name: backend
-          image: 974085360964.dkr.ecr.eu-north-1.amazonaws.com/simple-app-backend:e08c2f3514aef159f1c3d0899a909df594d02f10-2025-05-22-11-22
+        - name: {{ .Values.simpleAppBackend.app.name }}
+          image: {{ .Values.simpleAppBackend.image.repository }}:{{ .Values.simpleAppBackend.image.tag }}
           ports:
             - containerPort: 4000
           env:

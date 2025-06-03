@@ -5,11 +5,11 @@ metadata:
   namespace: kube-system
 data:
   mapUsers: |
-    - userarn: arn:aws:iam::974085360964:user/Oreoluwa
-      username: Oreoluwa
+    - userarn: arn:aws:iam::<ACCOUNT_ID>:user/<USERNAME>
+      username: <USERNAME>
       groups:
         - system:masters
-    - userarn: arn:aws:iam::974085360964:user/github-user
+    - userarn: arn:aws:iam::<ACCOUNT_ID>:user/github-user
       username: github-user
       groups:
         - eks:deployer

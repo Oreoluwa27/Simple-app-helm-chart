@@ -4,3 +4,11 @@ simpleAppFrontend:
     tag: 8916ba341bbc432355eedf48ec6ef8bab5936470-2025-06-03-10-11
 app:
   name: simple-app-frontend
+
+
+simpleAppBackend:
+  image:
+    repository: 974085360964.dkr.ecr.eu-north-1.amazonaws.com/simple-app-backend
+    tag: e08c2f3514aef159f1c3d0899a909df594d02f10-2025-05-22-11-22
+app:
+  name: simple-app-backend
