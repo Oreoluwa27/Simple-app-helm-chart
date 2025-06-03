@@ -18,7 +18,7 @@ metadata:
   namespace: default
 subjects:
   - kind: User
-    name: github-actions
+    name: github-user
     apiGroup: rbac.authorization.k8s.io
 roleRef:
   kind: Role
