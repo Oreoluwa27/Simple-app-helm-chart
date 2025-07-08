@@ -1,0 +1,20 @@
+grafana:
+  adminPassword: "mySecurePassword123"
+  service:
+    type: ClusterIP
+  ingress:
+    enabled: false  
+
+prometheus:
+  prometheusSpec:
+    serviceMonitorSelectorNilUsesHelmValues: false
+    retention: 7d
+    storageSpec:
+      volumeClaimTemplate:
+        spec:
+          storageClassName: gp2
+          accessModes: ["ReadWriteOnce"]
+          resources:
+            requests:
+              storage: 20Gi
+
