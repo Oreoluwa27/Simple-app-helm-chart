@@ -3,20 +3,20 @@ kind: Deployment
 metadata:
   name: simple-app-backend-deployment
   labels:
-    app: {{ .Values.app.name }}
+    app: {{ .Values.simpleAppBackend.app.name }}
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: {{ .Values.app.name }}
+      app: {{ .Values.simpleAppBackend.app.name }}
   template:
     metadata:
       labels:
-        app: {{ .Values.app.name }}
+        app: {{ .Values.simpleAppBackend.app.name }}
     spec:
       serviceAccountName: default
       containers:
-        - name: {{ .Values.app.name }}
+        - name: {{ .Values.simpleAppBackend.app.name }}
           image: {{ .Values.simpleAppBackend.image.repository }}:{{ .Values.simpleAppBackend.image.tag }}
           ports:
             - containerPort: 4000

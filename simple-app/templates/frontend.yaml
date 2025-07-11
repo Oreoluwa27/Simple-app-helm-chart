@@ -3,16 +3,16 @@ kind: Deployment
 metadata:
   name: simple-app-frontend-deployment
   labels:
-    app: {{ .Values.app.name }}
+    app: {{ .Values.simpleAppFrontend.app.name }}
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: {{ .Values.app.name }}
+      app: {{ .Values.simpleAppFrontend.app.name }}
   template:
     metadata:
       labels:
-        app: {{ .Values.app.name }}
+        app: {{ .Values.simpleAppFrontend.app.name }}
     spec:
       serviceAccountName: default
       containers:
