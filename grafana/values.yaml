@@ -3,12 +3,12 @@ grafana:
   service:
     type: ClusterIP
   ingress:
-    enabled: false  
+    enabled: false
 
 prometheus:
   prometheusSpec:
     serviceMonitorSelectorNilUsesHelmValues: false
-    retention: 7d
+    retention: 6d
     storageSpec:
       volumeClaimTemplate:
         spec:
@@ -17,4 +17,3 @@ prometheus:
           resources:
             requests:
               storage: 20Gi
-
